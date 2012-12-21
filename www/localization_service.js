@@ -2,11 +2,11 @@
 	var plugin;
 	var defaults = {
 		"user" : "Dummy",
-		"serverName" : "mschmuki.no-ip.org",
-		"serverPort" : "8080",
-		"serverPath" : "backend/services",
-		"minTimeFilter" : "10",
-		"minDistanceFilter" : "50",
+		"serverName" : "server.domain.net",
+		"serverPort" : "80",
+		"serverPath" : "services",
+		"minTimeFilter" : "15",
+		"minDistanceFilter" : "10",
 		"wakeupDistance" : "2000",
 		"sleepTimeWindow" : "600",
 		"sleepDistanceTreshold" : "2000",
@@ -33,7 +33,6 @@
 				}
 
 				// Store Defaults, if they aren't stored yet
-				// TODO: Wait for this calls! (Problem with first init of app)
 				$.each($(plugin).data('localizationService').options, function(
 						key, value) {
 					if (key != "debug")
